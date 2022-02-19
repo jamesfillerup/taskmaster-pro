@@ -33,7 +33,7 @@ var loadTasks = function() {
 
   // loop over object properties
   $.each(tasks, function(list, arr) {
-    console.log(list, arr);
+    // console.log(list, arr);
     // then loop over sub-array
     arr.forEach(function(task) {
       createTask(task.text, task.date, list);
@@ -129,6 +129,7 @@ $(".list-group").on("click", "span", function(){
     .text()
     .trim();
 
+    console.log("here");
   // create new input element
   var dateInput = $("<input>")
     .attr("type", "text")
