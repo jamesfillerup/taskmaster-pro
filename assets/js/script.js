@@ -80,6 +80,7 @@ $("#task-form-modal .btn-primary").click(function() {
 });
 
 $(".list-group").on("click", "p", function(){
+  console.log("im in the p tag");
   var text = $(this)
   .text()
   .trim();
@@ -124,12 +125,13 @@ $(".list-group").on("blur","textarea", function() {
 
 //due date was clicked
 $(".list-group").on("click", "span", function(){
+  console.log("span is working")
   //get current text
   var date = $(this)
     .text()
     .trim();
 
-    console.log("here");
+
   // create new input element
   var dateInput = $("<input>")
     .attr("type", "text")
